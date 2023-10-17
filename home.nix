@@ -96,6 +96,7 @@
     ./pkgs/git.nix
     ./pkgs/mako.nix
     ./pkgs/firefox.nix
+    ./pkgs/alacritty.nix
   ];
 
   services.gpg-agent = {
