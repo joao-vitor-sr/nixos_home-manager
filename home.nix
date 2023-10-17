@@ -12,9 +12,6 @@
     bitwarden
     tealdeer
     qbittorrent
-    obsidian
-    discord
-    spotify
   ];
 
   home.file = { };
@@ -24,6 +21,12 @@
     source = ./configs/hypr;
     target = ".config/hypr";
   };
+
+  # home.file."pcs" = {
+  #   source =
+  #     "https://drive.google.com/uc?export=download&id=15Q5qEBhVvRqq7gqmLlVcR7EylehBerz4";
+  #   target = "pcs";
+  # };
 
   home.file.".config/waybar/" = {
     recursive = true;
@@ -35,6 +38,18 @@
     recursive = true;
     source = ./configs/wofi;
     target = ".config/wofi";
+  };
+
+  home.file.".config/kmonad/" = {
+    recursive = true;
+    source = ./configs/kmonad;
+    target = ".config/kmonad";
+  };
+
+  home.file.".local/bin/" = {
+    recursive = true;
+    source = ./configs/bin;
+    target = ".local/bin";
   };
 
   home.file.".config/wlogout/" = {
@@ -50,6 +65,7 @@
     BROWSER = "firefox";
     LIBSEAT_BACKEND = "logind";
     NIXPKGS_ALLOW_BROKEN = "1";
+    NIXPKGS_ALLOW_UNFREE = "1";
     MOZ_ENABLE_WAYLAND = "1";
 
     XDG_DATA_HOME = "$HOME/.local/share";
@@ -76,9 +92,9 @@
 
   imports = [
     ./pkgs/zsh.nix
+    ./pkgs/starship.nix
     ./pkgs/git.nix
     ./pkgs/mako.nix
-    ./pkgs/nvchad.nix
     ./pkgs/firefox.nix
   ];
 

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+firefox --profile ~/.mozilla/firefox/otgtmvf2.Normie\ browser/

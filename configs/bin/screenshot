@@ -1,0 +1,21 @@
+#!/bin/sh
+
+main() {
+    choosen=$(printf "Region (Copy)\nRegion\nScreen (Copy)\nScreen" | wofi -i -d)
+    case $choosen in
+        "Region (Copy)")
+          grim -g "$(slurp)" - | wl-copy -t image/png
+            ;;
+        "Region")
+          grim -g "$(slurp)" 
+            ;;
+        "Screen (Copy)")
+          grim - | wl-copy -t image/png
+            ;;
+        "Screen")
+          grim 
+            ;;
+    esac
+}
+
+main "$@"

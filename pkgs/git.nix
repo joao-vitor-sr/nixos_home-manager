@@ -17,5 +17,9 @@
     ignores = [ "*~" "*.pdf" "shell.nix" ];
   };
 
-  home.packages = with pkgs; [ lazygit ];
+
+  programs.lazygit = {
+    enable = true;
+    package = pkgs.lazygit;
+  };
 }

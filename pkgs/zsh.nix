@@ -1,4 +1,5 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
   programs.zsh = {
     enable = true;
     shellAliases = {
@@ -15,10 +16,7 @@
       clr = "clear";
       v = "$EDITOR";
     };
-    histSize = 1000000;
-    histFile = "${config.xdg.dataHome}/zsh/history";
     autocd = true;
-    dotDir = true;
     enableAutosuggestions = true;
     enableCompletion = true;
     zplug = {
@@ -27,10 +25,6 @@
         { name = "zsh-users/zsh-autosuggestions"; }
         { name = "zap-zsh/vim"; }
         { name = "hlissner/zsh-autopair"; }
-        {
-          name = "romkatv/powerlevel10k";
-          tags = [ "as:theme" "depth:1" ];
-        }
       ];
     };
 
