@@ -8,9 +8,9 @@
 
   home.packages = with pkgs; [
     zathura
+    fzf
     bitwarden
     tealdeer
-    firefox
     qbittorrent
     obsidian
     discord
@@ -18,6 +18,30 @@
   ];
 
   home.file = { };
+
+  home.file.".config/hypr/" = {
+    recursive = true;
+    source = ./configs/hypr;
+    target = ".config/hypr";
+  };
+
+  home.file.".config/waybar/" = {
+    recursive = true;
+    source = ./configs/waybar;
+    target = ".config/waybar";
+  };
+
+  home.file.".config/wofi/" = {
+    recursive = true;
+    source = ./configs/wofi;
+    target = ".config/wofi";
+  };
+
+  home.file.".config/wlogout/" = {
+    recursive = true;
+    source = ./configs/wlogout;
+    target = ".config/wlogout";
+  };
 
   home.sessionVariables = {
     EDITOR = "nvim";
@@ -45,6 +69,23 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  include = [ pkgs/zsh.nix ];
+  programs.bat = {
+    enable = true;
+    config = { tabs = "8"; };
+  };
+
+  imports = [
+    ./pkgs/zsh.nix
+    ./pkgs/git.nix
+    ./pkgs/mako.nix
+    ./pkgs/nvchad.nix
+    ./pkgs/firefox.nix
+  ];
+
+  services.gpg-agent = {
+    enable = true;
+    defaultCacheTtl = 1800;
+    enableSshSupport = true;
+  };
 
 }
