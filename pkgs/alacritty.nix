@@ -8,7 +8,6 @@
           background = "#282a36";
           foreground = "#f8f8f2";
         };
-        cursor = "#f8f8f2";
         normal = {
           black = "#21222c";
           red = "#ff5555";
