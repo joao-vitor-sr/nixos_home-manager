@@ -47,6 +47,7 @@
       }
 
       alias tml='tmux_launch'
+      eval "$(zoxide init zsh)"
     '';
   };
   programs.fzf = {

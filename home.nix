@@ -6,7 +6,7 @@
 
   home.stateVersion = "23.05";
 
-  home.packages = with pkgs; [ zathura fzf bitwarden tealdeer qbittorrent ];
+  home.packages = with pkgs; [ zathura fzf bitwarden tealdeer qbittorrent webcord ];
 
   home.file = { };
 
@@ -15,12 +15,6 @@
     source = ./configs/hypr;
     target = ".config/hypr";
   };
-
-  # home.file."pcs" = {
-  #   source =
-  #     "https://drive.google.com/uc?export=download&id=15Q5qEBhVvRqq7gqmLlVcR7EylehBerz4";
-  #   target = "pcs";
-  # };
 
   home.file.".config/alacritty" = {
     source = ./configs/alacritty_theme.yml;
