@@ -29,12 +29,6 @@
     target = ".config/alacritty/theme.yml";
   };
 
-  home.file.".config/waybar/" = {
-    recursive = true;
-    source = ./configs/waybar;
-    target = ".config/waybar";
-  };
-
   home.file.".config/wofi/" = {
     recursive = true;
     source = ./configs/wofi;
@@ -101,6 +95,7 @@
     ./pkgs/mako.nix
     ./pkgs/firefox.nix
     ./pkgs/alacritty.nix
+    ./pkgs/waybar.nix
   ];
 
   services.gpg-agent = {
