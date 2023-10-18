@@ -6,7 +6,15 @@
 
   home.stateVersion = "23.05";
 
-  home.packages = with pkgs; [ zathura fzf bitwarden tealdeer qbittorrent webcord ];
+  home.packages = with pkgs; [
+    zathura
+    fzf
+    bitwarden
+    tealdeer
+    qbittorrent
+    webcord
+    ripgrep
+  ];
 
   home.file = { };
 
