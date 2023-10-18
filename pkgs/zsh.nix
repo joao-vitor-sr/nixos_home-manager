@@ -47,10 +47,15 @@
       }
 
       alias tml='tmux_launch'
-      eval "$(zoxide init zsh)"
     '';
   };
+  
   programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
+  programs.zoxide = {
     enable = true;
     enableZshIntegration = true;
   };
