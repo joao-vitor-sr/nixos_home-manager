@@ -7,7 +7,6 @@
   home.stateVersion = "23.05";
 
   home.packages = with pkgs; [
-    zathura
     fzf
     bitwarden
     tealdeer
@@ -96,6 +95,7 @@
     ./pkgs/firefox.nix
     ./pkgs/alacritty.nix
     ./pkgs/waybar.nix
+    ./pkgs/zathura.nix
   ];
 
   services.gpg-agent = {
