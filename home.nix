@@ -11,6 +11,7 @@
     bitwarden
     tealdeer
     qbittorrent
+    wofi
     webcord
     ripgrep
   ];
@@ -26,12 +27,6 @@
   home.file.".config/alacritty" = {
     source = ./configs/alacritty_theme.yml;
     target = ".config/alacritty/theme.yml";
-  };
-
-  home.file.".config/wofi/" = {
-    recursive = true;
-    source = ./configs/wofi;
-    target = ".config/wofi";
   };
 
   home.file.".config/kmonad/" = {
@@ -96,6 +91,7 @@
     ./pkgs/alacritty.nix
     ./pkgs/waybar.nix
     ./pkgs/zathura.nix
+    ./pkgs/wofi.nix
   ];
 
   services.gpg-agent = {
