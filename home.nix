@@ -1,6 +1,9 @@
 { config, pkgs, ... }:
 
 {
+
+  nixpkgs.config.allowUnfree = true;
+  
   home.username = "jvsr";
   home.homeDirectory = "/home/jvsr";
 
@@ -9,6 +12,11 @@
   home.packages = with pkgs; [
     swaybg
     lsd
+    lutris
+    steam
+    obsidian
+    spotify
+    swww
     fzf
     bitwarden
     tealdeer
