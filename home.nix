@@ -7,6 +7,8 @@
   home.stateVersion = "23.05";
 
   home.packages = with pkgs; [
+    swaybg
+    lsd
     fzf
     bitwarden
     tealdeer
