@@ -13,7 +13,6 @@
     swaybg
     lsd
     lutris
-    steam
     obsidian
     spotify
     swww
