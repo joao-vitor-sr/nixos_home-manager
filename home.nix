@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
 
@@ -22,6 +22,7 @@
     qbittorrent
     wofi
     webcord
+    libreoffice
     ripgrep
   ];
 
@@ -57,7 +58,7 @@
   };
 
   home.sessionVariables = {
-    EDITOR = "nvim";
+    EDITOR = "lvim";
     PATH = "$HOME/.local/bin:$(yarn global bin):$PATH";
     TERMINAL = "alacritty";
     BROWSER = "firefox";
@@ -101,6 +102,7 @@
     ./pkgs/waybar.nix
     ./pkgs/zathura.nix
     ./pkgs/wofi.nix
+    ./pkgs/lsp.nix
   ];
 
   services.gpg-agent = {
