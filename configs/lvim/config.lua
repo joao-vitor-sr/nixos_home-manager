@@ -32,10 +32,8 @@ lvim.plugins = {
 	},
 	{
 		"iurimateus/luasnip-latex-snippets.nvim",
-		-- vimtex isn't required if using treesitter
 		config = function()
 			require("luasnip-latex-snippets").setup()
-			-- or setup({ use_treesitter = true })
 			require("luasnip").config.setup({ enable_autosnippets = true })
 		end,
 	},
@@ -80,3 +78,6 @@ lvim.keys.normal_mode["H"] = "0"
 
 lvim.keys.visual_mode["K"] = ":m '<-2<CR>gv=gv"
 lvim.keys.visual_mode["J"] = ":m '>+1<CR>gv=gv"
+
+lvim.keys.normal_mode["<leader>p"] = [["_dP]];
+lvim.keys.visual_mode["<leader>p"] = [["_dP]];

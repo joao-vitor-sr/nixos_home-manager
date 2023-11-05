@@ -16,6 +16,7 @@
     obsidian
     spotify
     swww
+    ffmpeg
     fzf
     bitwarden
     tealdeer
@@ -103,6 +104,7 @@
     ./pkgs/zathura.nix
     ./pkgs/wofi.nix
     ./pkgs/lsp.nix
+    ./pkgs/newsboat.nix
   ];
 
   services.gpg-agent = {
