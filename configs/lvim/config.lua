@@ -1,4 +1,7 @@
 lvim.plugins = {
+  {
+    "mrjones2014/nvim-ts-rainbow"
+  },
 	{
 		"lervag/vimtex",
 		ft = { "tex", "bib" },
@@ -58,6 +61,30 @@ lvim.plugins = {
 			require("nvim-ts-autotag").setup()
 		end,
 	},
+{
+   "ThePrimeagen/harpoon"
+  },
+  {
+    "romgrk/nvim-treesitter-context",
+    config = function()
+      require("treesitter-context").setup{
+        enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
+        throttle = true, -- Throttles plugin updates (may improve performance)
+        max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
+        patterns = { -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
+          -- For all filetypes
+          -- Note that setting an entry here replaces all other patterns for this entry.
+          -- By setting the 'default' entry below, you can control which nodes you want to
+          -- appear in the context window.
+          default = {
+            'class',
+            'function',
+            'method',
+          },
+        },
+      }
+    end
+  },
 }
 
 -- enable relative line numbers
@@ -81,3 +108,15 @@ lvim.keys.visual_mode["J"] = ":m '>+1<CR>gv=gv"
 
 lvim.keys.normal_mode["<leader>p"] = [["_dP]];
 lvim.keys.visual_mode["<leader>p"] = [["_dP]];
+lvim.builtin.treesitter.rainbow.enable = true
+
+-- harpoon
+lvim.builtin.which_key.mappings["m"] = {
+  name = "Harpoon",
+  h = { "<cmd>lua require('harpoon.mark').add_file()<CR>", "󰃅 Add Mark" },
+  [';'] = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>", "  Harpoon" },
+  [','] = { "<cmd>lua require('harpoon.ui').nav_prev()<cr>", "Nav prev" },
+  ['.'] = { "<cmd>lua require('harpoon.ui').nav_next()<cr>", "Nav next" },
+}
+
+lvim.builtin.bufferline.active = false
