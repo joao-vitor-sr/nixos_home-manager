@@ -7,6 +7,7 @@
 
     extraConfig = {
       core = { whitespace = "trailing-space,space-before-tab"; };
+      init = { defaultBranch = "main"; };
       color = { ui = "auto"; };
       merge = { ff = "only"; };
       rerere = { enabled = "true"; };
