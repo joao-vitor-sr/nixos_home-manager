@@ -15,7 +15,7 @@ install_lvim ()
   echo "Installing LunarVim"
   LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
 
-  ln -s $HOME/.config/home-manager/configs/lvim/config.lua $HOME/.config/lvim/config/config.lua
+  ln -s $HOME/.config/home-manager/configs/lvim/config.lua $HOME/.config/lvim/config.lua
 }
 
 echo "This script is aimed for the first time setup, it install some packages that are a little bit hard to install with home-manager\n\n"

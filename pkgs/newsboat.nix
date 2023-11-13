@@ -37,7 +37,7 @@
       bind-key G end
       bind-key g home
 
-      macro v set browser "setsid -f mpv" ; open-in-browser ; set browser firefox
+      macro v set browser "down_yt_play " ; one; set browser firefox
       macro , open-in-browser
     '';
     urls = [
@@ -78,11 +78,6 @@
         tags = [ "news" "math" ];
         url = "https://www.ams.org/cgi-bin/content/news_items.cgi?rss=1";
         title = "American Mathematical Society";
-      }
-      {
-        tags = [ "news" "math" ];
-        url = "http://export.arxiv.org/rss/math";
-        title = "ArXiV Mathematics";
       }
       {
         tags = [ "youtube" "tech" "life" ];

@@ -3,7 +3,7 @@
 {
 
   nixpkgs.config.allowUnfree = true;
-  
+
   home.username = "jvsr";
   home.homeDirectory = "/home/jvsr";
 
@@ -11,6 +11,8 @@
 
   home.packages = with pkgs; [
     swaybg
+    neofetch
+    lxappearance
     lsd
     lutris
     obsidian
@@ -33,11 +35,6 @@
     recursive = true;
     source = ./configs/hypr;
     target = ".config/hypr";
-  };
-
-  home.file.".config/alacritty" = {
-    source = ./configs/alacritty_theme.yml;
-    target = ".config/alacritty/theme.yml";
   };
 
   home.file.".config/kmonad/" = {
@@ -99,11 +96,11 @@
     ./pkgs/git.nix
     ./pkgs/mako.nix
     ./pkgs/firefox.nix
-    ./pkgs/alacritty.nix
     ./pkgs/waybar.nix
     ./pkgs/zathura.nix
     ./pkgs/wofi.nix
     ./pkgs/lsp.nix
+    ./pkgs/foot.nix
     ./pkgs/newsboat.nix
   ];
 

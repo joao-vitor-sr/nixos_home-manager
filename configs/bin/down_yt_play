@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+url="$1" 
+
+if [[ -z "$url" ]]; then
+    echo "Usage: $(basename $0) <url>"
+    exit 1
+fi
+
+if ! command -v vlc &> /dev/null; then
+    echo "vlc is not installed"
+    exit 1
+fi
+
+if ! command -v yt-dlp &> /dev/null; then
+    echo "yt-dlp is not installed"
+    exit 1
+fi
+
+
+yt-dlp --exec "vlc {} && rm -rf {}" "$url"
