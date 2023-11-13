@@ -1,7 +1,6 @@
 { pkgs, ... }:
 
 {
-
   nixpkgs.config.allowUnfree = true;
 
   home.username = "jvsr";
@@ -10,7 +9,9 @@
   home.stateVersion = "23.05";
 
   home.packages = with pkgs; [
+    yt-dlp
     swaybg
+    vlc
     neofetch
     lxappearance
     lsd
@@ -49,6 +50,12 @@
     target = ".local/bin";
   };
 
+  home.file.".local/share/vlc/" = {
+    recursive = true;
+    source = ./configs/vlc;
+    target = ".local/share/vlc";
+  };
+
   home.file.".config/wlogout/" = {
     recursive = true;
     source = ./configs/wlogout;
@@ -58,7 +65,7 @@
   home.sessionVariables = {
     EDITOR = "lvim";
     PATH = "$HOME/.local/bin:$(yarn global bin):$PATH";
-    TERMINAL = "alacritty";
+    TERMINAL = "foot";
     BROWSER = "firefox";
     LIBSEAT_BACKEND = "logind";
     NIXPKGS_ALLOW_BROKEN = "1";
