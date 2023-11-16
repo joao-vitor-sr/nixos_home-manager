@@ -1,8 +1,5 @@
 lvim.plugins = {
 	{
-		"mrjones2014/nvim-ts-rainbow",
-	},
-	{
 		"lervag/vimtex",
 		ft = { "tex", "bib" },
 		config = function()
@@ -11,14 +8,6 @@ lvim.plugins = {
 			vim.g.vimtex_indent_enabled = 1
 			vim.g.vimtex_synctex = 1
 			vim.g.vimtex_fold_enabled = 0
-		end,
-	},
-	{
-		"kylechui/nvim-surround",
-		version = "*",
-		event = "VeryLazy",
-		config = function()
-			require("nvim-surround").setup({})
 		end,
 	},
 	{
@@ -50,8 +39,8 @@ lvim.plugins = {
 		dependencies = { "zbirenbaum/copilot.lua" },
 		config = function()
 			vim.defer_fn(function()
-				require("copilot").setup() -- https://github.com/zbirenbaum/copilot.lua/blob/master/README.md#setup-and-configuration
-				require("copilot_cmp").setup() -- https://github.com/zbirenbaum/copilot-cmp/blob/master/README.md#configuration
+				require("copilot").setup()
+				require("copilot_cmp").setup()
 			end, 100)
 		end,
 	},

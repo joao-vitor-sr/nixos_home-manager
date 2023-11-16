@@ -22,6 +22,7 @@
     ffmpeg
     fzf
     bitwarden
+    mako
     tealdeer
     qbittorrent
     wofi
@@ -109,6 +110,7 @@
     ./pkgs/lsp.nix
     ./pkgs/foot.nix
     ./pkgs/newsboat.nix
+    ./pkgs/tmux.nix
   ];
 
   services.gpg-agent = {

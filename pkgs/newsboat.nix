@@ -37,7 +37,7 @@
       bind-key G end
       bind-key g home
 
-      macro v set browser "down_yt_play " ; one; set browser firefox
+      macro v set browser "mpv " ; one; set browser firefox
       macro , open-in-browser
     '';
     urls = [
