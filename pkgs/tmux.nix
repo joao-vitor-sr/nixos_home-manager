@@ -6,6 +6,8 @@
     shortcut = "a";
     terminal = "foot";
     escapeTime = 0;
+    keyMode = "vi";
+    mouse = true;
     plugins = with pkgs; [
       tmuxPlugins.sensible
       tmuxPlugins.vim-tmux-navigator
@@ -14,26 +16,18 @@
       tmuxPlugins.better-mouse-mode
     ];
     extraConfig = ''
-            set -g mouse on
             set-option -sa terminal-overrides ",xterm*:Tc"
 
             set -g @dracula-show-battery false
             set -g @dracula-show-powerline true
             set -g @dracula-refresh-rate 10
             
-            set-window-option -g mode-keys vi
             bind -T copy-mode-vi v send-keys -X begin-selection
             bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel 'wl-copy'
 
             # Shift Alt vim keys to switch windows
             bind -n M-H previous-window
             bind -n M-L next-window
-
-            # Vim style pane selection
-            bind h select-pane -L
-            bind j select-pane -D 
-            bind k select-pane -U
-            bind l select-pane -R
 
             # set vi-mode
             set-window-option -g mode-keys vi

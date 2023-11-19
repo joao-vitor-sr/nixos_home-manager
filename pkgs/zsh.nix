@@ -38,9 +38,9 @@
           if [[ -z $TMUX ]]; then
               TMUX_CON_SESSION=__dev__
               if tmux has-session -t $TMUX_CON_SESSION 2>/dev/null; then
-                  tmux -f /etc/tmux.conf -2 attach-session -t $TMUX_CON_SESSION
+                  tmux -f $HOME/.config/tmux/tmux.conf -2 attach-session -t $TMUX_CON_SESSION
               else
-                  tmux -f /etc/tmux.conf -2 new-session -s $TMUX_CON_SESSION
+                  tmux -f $HOME/.config/tmux/tmux.conf -2 new-session -s $TMUX_CON_SESSION
               fi
           else
           fi
