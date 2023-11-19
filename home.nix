@@ -11,7 +11,6 @@
   home.packages = with pkgs; [
     yt-dlp
     swaybg
-    vlc
     neofetch
     lxappearance
     lsd
@@ -51,12 +50,6 @@
     target = ".local/bin";
   };
 
-  home.file.".local/share/vlc/" = {
-    recursive = true;
-    source = ./configs/vlc;
-    target = ".local/share/vlc";
-  };
-
   home.file.".config/wlogout/" = {
     recursive = true;
     source = ./configs/wlogout;
@@ -90,17 +83,8 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
-  programs.bat = {
-    enable = true;
-    config = {
-      tabs = "8";
-      theme = "Dracula";
-    };
-  };
-
   imports = [
     ./pkgs/zsh.nix
-    ./pkgs/starship.nix
     ./pkgs/git.nix
     ./pkgs/mako.nix
     ./pkgs/firefox.nix
@@ -111,6 +95,7 @@
     ./pkgs/foot.nix
     ./pkgs/newsboat.nix
     ./pkgs/tmux.nix
+    ./pkgs/bat.nix
   ];
 
   services.gpg-agent = {

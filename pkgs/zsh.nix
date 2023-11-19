@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ ... }: {
   programs.zsh = {
     enable = true;
     shellAliases = {
@@ -49,7 +49,7 @@
       alias tml='tmux_launch'
     '';
   };
-  
+
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
@@ -58,6 +58,15 @@
   programs.zoxide = {
     enable = true;
     enableZshIntegration = true;
+  };
+
+  programs.starship = {
+    enable = true;
+    enableZshIntegration = true;
+    settings = {
+      add_newline = true;
+      scan_timeout = 30;
+    };
   };
 
 }
