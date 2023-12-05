@@ -4,7 +4,7 @@
     baseIndex = 1;
     clock24 = true;
     shortcut = "a";
-    terminal = "foot";
+    terminal = "screen-256color";
     escapeTime = 0;
     keyMode = "vi";
     mouse = true;
@@ -12,16 +12,11 @@
       tmuxPlugins.sensible
       tmuxPlugins.vim-tmux-navigator
       tmuxPlugins.yank
-      tmuxPlugins.dracula
       tmuxPlugins.better-mouse-mode
     ];
     extraConfig = ''
             set-option -sa terminal-overrides ",xterm*:Tc"
 
-            set -g @dracula-show-battery false
-            set -g @dracula-show-powerline true
-            set -g @dracula-refresh-rate 10
-            
             bind -T copy-mode-vi v send-keys -X begin-selection
             bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel 'wl-copy'
 

@@ -57,7 +57,7 @@
   };
 
   home.sessionVariables = {
-    EDITOR = "lvim";
+    EDITOR = "nvim";
     PATH = "$HOME/.local/bin:$(yarn global bin):$PATH";
     TERMINAL = "foot";
     BROWSER = "firefox";

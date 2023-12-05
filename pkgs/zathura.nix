@@ -5,46 +5,43 @@
       window-title-basename = "true";
       selection-clipboard = "clipboard";
 
-      default-bg = "#282a36";
-      default-fg = "#f8f8f2";
+      notification-error-bg = "#1F1F28";
+      notification-error-fg = "#FF5D62";
+      notification-warning-bg = "#1F1F28";
+      notification-warning-fg = "#FFA066";
+      notification-bg = "#1F1F28";
+      notification-fg = "#DCD7BA";
 
-      notification-error-bg = "#ff5555";
-      notification-error-fg = "#f8f8f2";
-      notification-warning-bg = "#ffb86c";
-      notification-warning-fg = "#44475a";
-      notification-bg = "#282a36";
-      notification-fg = "#f8f8f2";
+      completion-bg = "#1F1F28";
+      completion-fg = "#C8C093";
+      completion-group-bg = "#2A2A37";
+      completion-group-fg = "#C8C093";
+      completion-highlight-bg = "#957FB8";
+      completion-highlight-fg = "#1F1F28";
 
-      completion-bg = "#282a36";
-      completion-fg = "#6272a4";
-      completion-group-bg = "#282a36";
-      completion-group-fg = "#6272a4";
-      completion-highlight-bg = "#44475a";
-      completion-highlight-fg = "#f8f8f2";
+      index-bg = "#1F1F28";
+      index-fg = "#957FB8";
+      index-active-bg = "#957FB8";
+      index-active-fg = "#1F1F28";
 
-      index-bg = "#282a36";
-      index-fg = "#f8f8f2";
-      index-active-bg = "#44475a";
-      index-active-fg = "#f8f8f2";
+      inputbar-bg = "#1F1F28";
+      inputbar-fg = "#C8C093";
 
-      inputbar-bg = "#282a36";
-      inputbar-fg = "#f8f8f2";
-      statusbar-bg = "#282a36";
-      statusbar-fg = "#f8f8f2";
+      statusbar-bg = "#1F1F28";
+      statusbar-fg = "#C8C093";
 
-      highlight-color = "#ffb86c";
-      highlight-active-color = "#ff79c6";
+      highlight-color = "#FFA066";
+      highlight-active-color = "#FF5D62";
 
-      render-loading = true;
-      render-loading-fg = "#282a36";
-      render-loading-bg = "#f8f8f2";
+      default-bg = "#1F1F28";
+      default-fg = "#C8C093";
+      render-loading = "true";
+      render-loading-bg = "#1F1F28";
+      render-loading-fg = "#C8C093";
 
-      recolor-lightcolor = "#282a36";
-      recolor-darkcolor = "#f8f8f2";
-
-      adjust-open = "width";
-      recolor = true;
-
+      recolor-lightcolor = "#1F1F28";
+      recolor-darkcolor = "#C8C093";
+      recolor = "true";
     };
   };
 }

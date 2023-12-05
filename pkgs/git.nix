@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ pkgs, ... }: {
   programs.git = {
     enable = true;
     package = pkgs.gitAndTools.gitFull;
@@ -17,7 +17,6 @@
 
     ignores = [ "*~" "*.pdf" "shell.nix" ];
   };
-
 
   programs.lazygit = {
     enable = true;

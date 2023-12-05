@@ -1,6 +1,7 @@
 lvim.plugins = {
 	{
 		"lervag/vimtex",
+		lazy = true,
 		ft = { "tex", "bib" },
 		config = function()
 			vim.g.vimtex_view_method = "zathura"
@@ -23,13 +24,6 @@ lvim.plugins = {
 		end,
 	},
 	{
-		"iurimateus/luasnip-latex-snippets.nvim",
-		config = function()
-			require("luasnip-latex-snippets").setup()
-			require("luasnip").config.setup({ enable_autosnippets = true })
-		end,
-	},
-	{
 		"mbbill/undotree",
 		lazy = false,
 	},
@@ -46,6 +40,7 @@ lvim.plugins = {
 	},
 	{
 		"windwp/nvim-ts-autotag",
+		event = { "BufReadPre" },
 		config = function()
 			require("nvim-ts-autotag").setup()
 		end,
@@ -99,14 +94,10 @@ lvim.keys.normal_mode["<leader>p"] = [["_dP]]
 lvim.keys.visual_mode["<leader>p"] = [["_dP]]
 lvim.builtin.treesitter.rainbow.enable = true
 
--- harpoon
-lvim.builtin.which_key.mappings["m"] = {
-	name = "Harpoon",
-	h = { "<cmd>lua require('harpoon.mark').add_file()<CR>", "󰃅 Add Mark" },
-	[";"] = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>", "  Harpoon" },
-	[","] = { "<cmd>lua require('harpoon.ui').nav_prev()<cr>", "Nav prev" },
-	["."] = { "<cmd>lua require('harpoon.ui').nav_next()<cr>", "Nav next" },
-}
+lvim.keys.normal_mode["<C-e>"] = "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>"
+lvim.keys.normal_mode["<leader>a"] = "<cmd>lua require('harpoon.mark').add_file()<CR>"
+lvim.keys.normal_mode["<C-,>"] = "<cmd>lua require('harpoon.ui').nav_prev()<CR>"
+lvim.keys.normal_mode["<C-.>"] = "<cmd>lua require('harpoon.ui').nav_next()<CR>"
 
 lvim.builtin.bufferline.active = false
 
