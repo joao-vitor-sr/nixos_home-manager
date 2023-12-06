@@ -38,6 +38,7 @@
     target = ".config/hypr";
   };
 
+
   home.file.".config/kmonad/" = {
     recursive = true;
     source = ./configs/kmonad;

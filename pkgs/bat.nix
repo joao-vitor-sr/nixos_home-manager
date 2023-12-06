@@ -3,7 +3,7 @@
     enable = true;
     config = {
       tabs = "8";
-      theme = "Dracula";
+      theme = "Gruvbox";
     };
   };
 
