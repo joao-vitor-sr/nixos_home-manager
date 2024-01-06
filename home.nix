@@ -25,7 +25,6 @@
     tealdeer
     qbittorrent
     wofi
-    webcord
     libreoffice
     ripgrep
   ];
