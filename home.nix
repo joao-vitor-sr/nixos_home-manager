@@ -15,28 +15,35 @@
     lxappearance
     lsd
     lutris
+    gnome.nautilus
     obsidian
     spotify
     swww
     ffmpeg
     fzf
     bitwarden
-    mako
     tealdeer
     qbittorrent
     wofi
     libreoffice
     ripgrep
+    logseq
+    gruvbox-gtk-theme
   ];
 
   home.file = { };
+
+  home.file.".config/gtk-3.0/" = {
+    recursive = true;
+    source = ./configs/gtk-3.0;
+    target = ".config/gtk-3.0";
+  };
 
   home.file.".config/hypr/" = {
     recursive = true;
     source = ./configs/hypr;
     target = ".config/hypr";
   };
-
 
   home.file.".config/kmonad/" = {
     recursive = true;
@@ -60,7 +67,7 @@
     EDITOR = "nvim";
     PATH = "$HOME/.local/bin:$(yarn global bin):$PATH";
     TERMINAL = "foot";
-    BROWSER = "firefox";
+    BROWSER = "floorp";
     LIBSEAT_BACKEND = "logind";
     NIXPKGS_ALLOW_BROKEN = "1";
     NIXPKGS_ALLOW_UNFREE = "1";
@@ -78,6 +85,8 @@
     QT_QPA_PLATFORM = "wayland";
     XDG_DATA_DIRS =
       "$XDG_DATA_DIRS:/usr/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share";
+
+    GTK_THEME="Gruvbox:dark";
   };
 
   # Let Home Manager install and manage itself.

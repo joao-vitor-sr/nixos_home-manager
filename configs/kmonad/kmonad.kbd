@@ -46,7 +46,7 @@
 
 (deflayer qwerty 
   @nom  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12 
-  grv  4    2      3      1      5         6    0        8       9      7    -    =    bspc
+  grv  1    2      3      4      5         6    7        8       9      0    -    =    bspc
   tab  q    w      e      r      t         y    u        i       o      p    @num ]    \
   @caps_esc @a_met @s_alt @d_ctl @f_sft    g    h        @j_sft   @k_ctl  @l_alt @sem_met  '    ret
   bspc      z      x      c      @v_num         b    n        m       ,      .         /    @mdf
@@ -73,11 +73,11 @@
 
 (deflayer neutral
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12 
-  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  grv  1    2    3    4    5    6    7    8    9    0    -    @nom    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    f    g    h    j    k    l    ;    '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lmet lalt           spc            ralt rmet @nom
+  lsft z    x    c    v    b    n    m    ,    .    up    rsft
+  lctl lmet lalt           spc            left down right
 )
 
 (deflayer numberlayer
