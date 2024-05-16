@@ -59,7 +59,7 @@
   tab  4    2    3    1    5    6    0    8    9    7    @nom ]    \
   @caps_esc $    +    \(    \)    @    |    -    =    \_    *    '    ret
   bspc !    #    {    }    ~    &    [    ]    %    ^    @mdf
-  lctl lmet lalt           spc            ralt rmet rctl 
+  lctl lmet lalt           spc            ralt rmet @nom 
 )
 
 (deflayer modifiers

@@ -27,8 +27,6 @@
     wofi
     libreoffice
     ripgrep
-    logseq
-    gruvbox-gtk-theme
   ];
 
   home.file = { };
