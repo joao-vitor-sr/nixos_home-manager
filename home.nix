@@ -11,11 +11,13 @@
   home.packages = with pkgs; [
     yt-dlp
     swaybg
+    emacs
     neofetch
     lxappearance
     lsd
     lutris
     gnome.nautilus
+    gnome.adwaita-icon-theme
     obsidian
     spotify
     swww
@@ -27,6 +29,8 @@
     wofi
     libreoffice
     ripgrep
+    flutter
+    inkscape-with-extensions
   ];
 
   home.file = { };
@@ -63,9 +67,9 @@
 
   home.sessionVariables = {
     EDITOR = "nvim";
-    PATH = "$HOME/.local/bin:$(yarn global bin):$PATH";
+    PATH = "$HOME/.npm-global:$HOME/.local/bin:$(yarn global bin):$PATH";
     TERMINAL = "foot";
-    BROWSER = "floorp";
+    BROWSER = "vivaldi";
     LIBSEAT_BACKEND = "logind";
     NIXPKGS_ALLOW_BROKEN = "1";
     NIXPKGS_ALLOW_UNFREE = "1";
@@ -114,7 +118,7 @@
   xdg.mimeApps = {
     defaultApplications = {
       "text/html" = "firefox.desktop";
-      "text/plain" = "nvim.desktop";
+      "text/plain" = "emacs.desktop";
       "x-scheme-handler/http" = "firefox.desktop";
       "x-scheme-handler/https" = "firefox.desktop";
       "application/pdf" = "org.pwmt.zathura.desktop";

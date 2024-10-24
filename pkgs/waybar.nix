@@ -5,49 +5,30 @@
       mainBar = {
         position = "top";
         layer = "top";
-        height = 30;
-        modules-left =
-          [ "custom/launcher" "hyprland/workspaces" "custom/playerlabel" ];
-        modules-center = [ "cpu" "memory" ];
-        modules-right = [ "tray" "network" "pulseaudio" "clock" ];
+        height = 0;
+        mod = "dock";
+        modules-left = [ "clock" "custom/weather" "hyprland/workspaces" ];
+        modules-center = [ "hyprland/window" ];
+        modules-right = [ "network" "pulseaudio" ];
 
-        "custom/launcher" = { format = "󰈸"; };
+        "hyprland/window" = { format = "{}"; };
+
         "hyprland/workspaces" = {
           all-outputs = true;
-          disable-scroll = false;
-          on-scroll-up = "hyprctl dispatch workspace -1";
-          on-scroll-down = "hyprctl dispatch workspace +1";
-          format = "{icon}";
+          on-scroll-up = "hyprctl dispatch workspace e+1";
+          on-scroll-down = "hyprctl dispatch workspace e-1";
           on-click = "activate";
+          format = "{icon}";
           format-icons = {
+            "1" = "";
+            "2" = "";
+            "3" = "";
+            "4" = "";
+            "5" = "";
             urgent = "";
-            active = "";
-            default = "󰧞";
-            sort-by-number = true;
+            active = "";
+            default = "";
           };
-        };
-        "custom/playerlabel" = {
-          format = "<span>{}</span>";
-          return-type = "json";
-          max-length = 48;
-          exec = ''
-            playerctl -a metadata --format '{"text": "{{artist}} - {{markup_escape(title)}}", "tooltip": "{{playerName}} : {{markup_escape(title)}}", "alt": "{{status}}", "class": "{{status}}"}' -F'';
-
-          on-click-middle = "playerctl play-pause";
-          on-click = "playerctl previous";
-          on-click-right = "playerctl next";
-        };
-
-        "cpu" = {
-          format = "󰻠 {usage}%";
-          format-alt = "󰻠 {avg_frequency} GHz";
-          interval = 5;
-        };
-
-        "memory" = {
-          format = "󰍛 {}%";
-          format-alt = "󰍛 {used}/{total} GiB";
-          interval = 5;
         };
 
         "tray" = {
@@ -77,7 +58,7 @@
         };
 
         "clock" = {
-          format = " {:%H:%M}";
+          format = "{:%H:%M}";
           tooltip = "true";
           tooltip-format = ''
             <big>{:%Y %B}</big>

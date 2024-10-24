@@ -4,8 +4,10 @@
     lua-language-server
     stylua
     rust-analyzer
-    nodePackages.intelephense
+    phpactor
     nodePackages.typescript-language-server
+    nodePackages.intelephense
+    vscode-langservers-extracted
   ];
 
 }
